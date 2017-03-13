@@ -479,34 +479,4 @@ quit;
 %CharSum;
 
 
-/*
-
-
-proc sql noprint; 
-		
-	select variable
-		
-	into :VarNoVals separated by ' '
-		
-	from VarsFlagged
-		
-	where Flag = '***'
-; 
-quit;
-	
-	
-
-data newdata; 
-		
-	set &dataset
-	
-		(drop = &VarNoVals);
-	
-run;
-
-*/
-
-
-
-
 
