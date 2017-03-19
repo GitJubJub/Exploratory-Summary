@@ -1,13 +1,13 @@
-
+s
 	/***********************************************************************/
 	/* SAS Code for an Exploratory Summary of Datasets                     */
 	/*                                                                     */
-	/*  SAS is a great tool for working with large datasets. The program   */
-	/* R has a convenient function (str) which gives a bird's eye view     */
-	/* of a dataset.  This SAS Program gives a similar type of view for    */
-	/* users when reviewing a dataset.                                     */
+	/*  I program in both SAS and R, though mostly in SAS. In R, the       */
+	/* program has a convenient function (str) which gives a bird's eye    */
+	/* view of a dataset. The SAS Program below offers a similar summary   */
+	/* for users when reviewing a dataset.                                 */
 	/*                                                                     */
-	/* The code check the data for missing values.  It also separates the  */
+	/* The code checks the data for missing values.  It also separates the */
 	/* data into three different types:  Date, Numeric and Character.      */
 	/* It summarizes the Date and Numeric values with a seven number       */
 	/* summary (Min, Max, IQs, Median, Mean and SD).  For character        */
@@ -254,7 +254,7 @@ quit;
 		
 		var &DateVars; 
 		
-		table &DateVars, n nmiss (Min Q1 median Q3 Max Mean Std)*format=mmddyy10. range*format = comma.; 
+		table &DateVars, n nmiss (Min Q1 median Q3 Max Mean)*format=mmddyy10. Std*format = best8. range*format = comma.; 
 		
 		run; 
 		
