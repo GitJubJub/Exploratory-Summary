@@ -331,7 +331,7 @@ quit;
 			
 			group by 1
 			
-			order by Count, Values;
+			order by Count, Values desc;
 			
 		quit;
 
